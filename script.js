@@ -21,6 +21,7 @@ wordInput.addEventListener('keypress', (e) => {
         // Clear input
         wordInput.value = '';
     }
+}   );  
 
 // Display recognized words
 function displayWords(text) {
