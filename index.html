@@ -3,34 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tap the Words to Hear Them!</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Text-to-Speech Example</title>
+    <style>
+        .word {
+            margin: 10px;
+            padding: 10px;
+            display: inline-block;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            font-size: 24px; /* Increase font size */
+        }
+        #wordInput {
+            width: 80%;
+            padding: 10px;
+            font-size: 24px; /* Increase font size */
+            margin-bottom: 10px;
+        }
+        #displayWordsButton {
+            padding: 10px 20px;
+            font-size: 24px; /* Increase font size */
+        }
+    </style>
 </head>
 <body>
     <h1>Tap the Words to Hear Them!</h1>
+    <input type="text" id="wordInput" placeholder="Enter words separated by spaces">
+    <button id="displayWordsButton">Display Words</button>
+    <div id="output"></div>
 
-    <div id="textSection">
-        <input type="text" id="textInput" placeholder="Enter words separated by spaces">
-        <button id="submitText" aria-label="Submit Text">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-        </button>
-    </div>
-
-    <div id="textOutput"></div>
-
-    <div id="drawingSection">
-        <canvas id="drawingCanvas"></canvas>
-        <button id="submitDrawing" aria-label="Submit Drawing">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-            </svg>
-        </button>
-    </div>
-
-    <div id="drawingOutput"></div>
+    <script src="script.js"></script>
 </body>
 </html>
