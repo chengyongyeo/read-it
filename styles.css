@@ -1,25 +1,87 @@
-/* styles.css */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'OpenDyslexic', 'Comic Sans MS', sans-serif;
+    background-color: #fcfbe6;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
     text-align: center;
-    background-color: #f9f9f9;
+    margin-bottom: 20px;
 }
 
-#word-container {
-    margin-top: 20px;
-}
-
-.word {
-    font-size: 24px;
-    margin: 10px;
-    padding: 10px 15px;
-    /*  border: 2px solid #007BFF;
-    border-radius: 5px; */
+button {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
-.word:hover {
-    background-color: #007BFF;
-    color: white;
+#textSection, #drawingSection {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+#textInput {
+    flex-grow: 1;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#submitText, #submitDrawing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-left: 10px;
+}
+
+#drawingCanvas {
+    flex-grow: 1;
+    height: 300px;
+    border: 1px solid #000;
+    background-color: white;
+    margin-right: 10px;
+}
+
+#textOutput, #drawingOutput {
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+    min-height: 50px;
+    /*background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;*/
+    padding: 10px;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://cdn.jsdelivr.net/npm/open-dyslexic@1.0.3/open-dyslexic-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
